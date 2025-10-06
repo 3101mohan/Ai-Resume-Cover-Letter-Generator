@@ -60,9 +60,7 @@ streamlit run streamlit_app.py
 5. Open your browser at **[http://localhost:8501](http://localhost:8501)** 🎉
 
 ## 📸 Preview
-
-![Preview](https://raw.githubusercontent.com/3101mohan/Ai-Resume-Cover-Letter-Generator/main/preview.png)
-
+https://github.com/3101mohan/Ai-Resume-Cover-Letter-Generator/tree/main/result
 ## 🌟 Future Enhancements
 
 * Multi-language resume generation
