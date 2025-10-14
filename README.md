@@ -20,24 +20,37 @@ An intelligent web application built with **Streamlit** and **Google Gemini API*
 ## 📂 Project Structure
 
 ```
-AI_Resume_CoverLetter_Generator/
-│── data/                # Sample resumes & job descriptions
-│── src/                 # Core logic & AI pipeline
-│── streamlit_app.py     # Streamlit frontend
-│── requirements.txt     # Dependencies
-│── README.md            # Project documentation
+Ai-Resume-Cover-Letter-Generator/
+├── src/                 # Core logic & AI pipeline
+│   ├── config.py        # Configuration & API key management
+│   ├── utils.py         # Gemini API integration
+│   ├── prompts.py       # Prompt templates
+│   ├── parser.py        # Document parsing utilities
+│   └── export.py        # Export to DOCX/PDF
+├── result/              # Sample output screenshots
+├── app.py               # Main Streamlit application
+├── requirements.txt     # Python dependencies
+├── .env.example         # Environment variables template
+├── LICENSE              # MIT License
+└── README.md            # Project documentation
 ```
 
 ## ⚡ Installation & Usage
 
-1. Clone this repository:
+### Prerequisites
+- Python 3.8 or higher
+- Google Gemini API key (get it from [Google AI Studio](https://ai.google.dev/))
+
+### Setup Instructions
+
+1. **Clone this repository:**
 
 ```bash
 git clone https://github.com/3101mohan/Ai-Resume-Cover-Letter-Generator.git
 cd Ai-Resume-Cover-Letter-Generator
 ```
 
-2. Create and activate a virtual environment:
+2. **Create and activate a virtual environment:**
 
 ```bash
 python -m venv .venv
@@ -45,22 +58,37 @@ python -m venv .venv
 source .venv/bin/activate  # Linux/Mac
 ```
 
-3. Install dependencies:
+3. **Install dependencies:**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Run the app:
+4. **Configure your API key:**
 
-```bash
-streamlit run streamlit_app.py
+Create a `.env` file in the project root and add your Gemini API key:
+
+```env
+GEMINI_API_KEY=your_api_key_here
 ```
 
-5. Open your browser at **[http://localhost:8501](http://localhost:8501)** 🎉
+**Note:** You can copy `.env.example` to `.env` and update it with your actual API key.
+
+5. **Run the app:**
+
+```bash
+streamlit run app.py
+```
+
+6. **Open your browser at [http://localhost:8501](http://localhost:8501)** 🎉
 
 ## 📸 Preview
-https://github.com/3101mohan/Ai-Resume-Cover-Letter-Generator/tree/main/result
+
+Check out sample outputs in the [result folder](./result):
+
+![Resume Generator Interface](./result/{5BACE85E-A0FC-406B-9E48-2D091120F64F}.png)
+![Cover Letter Generation](./result/{BCF0B165-A16F-4520-A828-D26B8F41DCE7}.png)
+![ATS Scoring & Analysis](./result/{E5234CC0-F898-477E-A5C9-7E57F1786F67}.png)
 ## 🌟 Future Enhancements
 
 * Multi-language resume generation
