@@ -1,5 +1,5 @@
 streamlit
 python-dotenv
-requests
+google-genai
 python-docx
 fpdf2
